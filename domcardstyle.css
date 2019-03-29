@@ -1,0 +1,70 @@
+body {
+    background-color: lightgrey;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.domcardcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.myDiv{
+    width: 200px;
+    height:200px;
+    margin: 20px 10px;
+    padding: 20px;
+    color:white;
+    display: inline-block;
+}
+
+.cardcontainer {
+    background-color: white;
+    height: 100vh;
+    margin: 5px;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.panelleft {
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 50%;
+    justify-content: center;
+}
+.panelright {
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 50%;
+}
+
+.card {
+    background-color: azure;
+    height: auto;
+    margin:10px;
+    border: 2px solid grey;
+    text-align: center;
+}
+
+.cardID {
+    font-size: 24px;
+    font-weight: bold;
+}
+.cardbig {
+    background-color: white;
+    height: 400px;
+    margin: 10px;
+    border: 2px solid grey;
+}
+
+.btn, .btnAddBefore, .btnAddAfter, .btnDelete {
+    background-color: lightgrey;
+    margin: 5px;
+}
+
+.btncenter {
+    align-items: center;
+}
+

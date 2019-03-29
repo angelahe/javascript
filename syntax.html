@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        p.small {
+            line-height: 0.3;
+        }
+        p.indent {
+            text-indent: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <table style="width:100%">
+        <tr>
+            <th>Variable Types</th>
+            <th>Syntax</th>
+            <th>Output variable to Page</th>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>var a = 10;</td>
+            <td id="syntaxnumber"></td>
+        </tr>
+        <tr>
+            <td>string</td>
+            <td>var b = "abc";</td>
+            <td id="syntaxstring"></td>
+        </tr>
+        <tr>
+            <td>boolean</td>
+            <td>var c = true;</td>
+            <td id="syntaxbool"></td>
+        </tr>
+        <tr>
+            <td>Array</td>
+            <td>
+                <p class = "small">var arr = ["hello world",</p>
+                <p class = "small indent"> 42,</p>
+                <p class = "small indent">true];</p>
+            </td>
+            <td id="syntaxarray"></td>
+        </tr>
+        <tr>
+            <td>Object</td>
+            <td>
+                <p class = "small">var obj= { </p>
+                <p class = "small indent">a:"hello world",</p>
+                <p class = "small indent">b:42,</p>
+                <p class = "small indent">c:true</p>
+                <p class = "small">};</p>
+            </td>
+            <td id="syntaxobject"></td>
+        </tr>
+        <tr>
+            <td>Undefined</td>
+            <td>example of undefined</td>
+            <td>cannot set an innerHTML to undefined</td>
+        </tr>
+        <tr>
+            <td>If/Else statement</td>
+            <td>
+                <p class = "small">if (x==true) {</p>
+                <p class = "small indent">console.log("This is true");</p>
+                <p class = "small">}</p>
+                <p class = "small">else {</p>
+                <p class = "small indent">console.log("This is false");</p>
+                <p class = "small">}</p>
+            </td>
+            <td id="syntaxifelse"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>function</p><br><br>
+                <p>anonymous function</p>
+            </td>
+            <td>
+                <p class = "small">function sayFoo() {</p>
+                <p class = "small indent">console.log("I am in the foo function");</p>
+                <p class = "small">}</p>
+                <p class = "small">sayFoo();</p>
+                <br>
+                <p class = "small">var sayBar = function() {</p>
+                <p class = "small indent">console.log("I am in the bar function");</p>
+                <p class = "small">}</p>
+                <p class = "small">sayBar();</p>
+            </td>
+        </tr>
+        </tr>
+
+    </table>
+
+
+    <button onclick="numbers.forEach(myFunction)">Click Here to print each array element</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+    //for each with array and function
+        demoP = document.getElementById("demo");
+        var numbers = [4, 9, 16, 25];
+
+        function myFunction(item, index) {
+            demoP.innerHTML = demoP.innerHTML + "index[" + index + "]: " + item + "<br>";
+        }
+    </script>
+
+    <p id="basic"></p>
+
+    <script>
+        document.getElementById("basic").textContent = "Hello world from inline JavaScript";
+    </script>
+
+    <script>
+        "use strict";
+
+        //example of number
+        var a = 10;
+        document.getElementById("syntaxnumber").textContent = a;
+        console.log("This is a number "+a);
+        console.log("syntaxnumber value is "+ document.getElementById("syntaxnumber").value);
+        //example of string
+        var b = "abc";
+        document.getElementById("syntaxstring").textContent = b;
+        console.log("This is a string "+b);
+        //example of boolean
+        var c = true;
+        document.getElementById("syntaxbool").textContent = c;
+        console.log("This is a boolean "+c);
+        //example of array
+        var arr = [ "hello world",
+            42,
+            true ];
+        document.getElementById("syntaxarray").textContent = arr;
+        console.log("This is an array " + arr);
+        //example of dictionary/objects
+        var obj = {
+            a:"hello world",
+            b:42,
+            c:true
+        };
+        document.getElementById("syntaxobject").textContent = obj;
+        console.log("This is an object:\n");
+        console.dir(obj);
+        //example of undefined
+        var undef = undefined;
+        var undeftext = "cannot set an innerHTML to null";
+        //document.getElementById("syntaxundefined").textContent = undeftext;
+        console.log("This variable is undefined: ", undef);
+        //example of if else
+        var x = true;
+        if (x == true) {
+            console.log("This is true");
+        }
+        else {
+            console.log("This is false");
+        }
+        document.getElementById("syntaxifelse").textContent = x;
+
+        //example of a function
+        function sayFoo() {
+            console.log("I'm in the foo function");
+        }
+
+        var sayBar = function() {
+            console.log("I'm in the bar function");
+        }
+
+        sayFoo();
+        sayBar();
+
+        //example of using parameters
+
+        function sing(song) {
+            console.log("I am singing "+ song);
+        }
+
+        sing("Laaaaaa");
+
+        //example of returning a value in a function
+
+        function multiply(a, b) {
+            return a*b;
+        }
+
+        var x = multiply(5, 10);
+        console.log("X should be 50: " + x);
+
+
+        var arr2 = ["my", "name", "is"];
+        console.log("Array is: " + arr2);
+
+        //array add to the front
+        arr2.unshift("Hello");
+        console.log("Added Hello to front of array: "+ arr2);
+
+        //array add to end
+        arr2.push("Gary");
+        console.log("Added Gary to the end of array: "+ arr2);
+
+        //array update value
+        arr2[4] = "Mary";
+        console.log("Changed Gary to Mary:" + arr2);
+
+        //for loop example
+        const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+        let info = 'My for cats are called ';
+
+        for (let i = 0; i < cats.length; i++) {
+            if(i < (cats.length-1)) {
+                info += cats[i] + ', ';
+            }
+            else {
+                info += cats[i];
+            }
+        }
+
+        console.log(info);
+
+        //for/in loop example
+        var person = {fname:"John", lname:"Doe", age:25};
+
+        var text = "";
+        var x;
+        for (x in person) {
+            text += person[x] + " ";
+        }
+        console.log("object is :" + person);
+        console.log("For in example" + text);
+
+        //while loop example
+        let j = 0;
+        let info2 = 'Her while cats are called ';
+
+        while (j < cats.length) {
+            if (j === cats.length - 1) {
+                info2 += 'and ' + cats[j] + '.';
+            } else {
+                info2 += cats[j] + ', ';
+            }
+
+            j++;
+        }
+
+        console.log(info2);
+        //do while example
+        console.log("do while example count down from 10");
+        var counterOne = 10;
+        do {
+            console.log("counter is " + counterOne);
+            counterOne--;
+        }  while (counterOne > 0);
+
+
+        //object declaration and lookup to get value
+        var obj2 = {
+            aa:"hello world",
+            bb:42,
+            cc:true
+        };
+
+        console.log("This is the bb key from the obj2 object: " + obj2.bb);
+
+    </script>
+
+</body>
+</html>

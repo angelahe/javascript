@@ -1,0 +1,41 @@
+body {
+
+    height: 100%;
+    background-image: linear-gradient(#e5b7da , #c0b7e5);
+    width: 100vw;
+
+}
+
+.cardcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+}
+
+.card {
+    background-color: white;
+    height: auto;
+    margin:20px;
+    padding: 10px;
+    border: 3px solid black;
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+    /*justify-content: center;*/
+    box-shadow: 10px 10px 10px 1px #000000;
+}
+
+.btnDelete {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 8px;
+}
+
+.cardID {
+    font-size: 20px;
+    font-family: Arial;
+}
